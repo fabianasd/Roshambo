@@ -1,6 +1,6 @@
-## ColorMakerNew
+## Roshambo
 
-#### Aplicativo para iPhone de simulação de cores personalizadas.
+#### Aplicativo para iPhone e jogas aleatórias de Rock, Paper and Scissors
 
 ## Visualização: IPhone SE (2nd generation)
 
@@ -11,7 +11,6 @@
 ### Result
 
 ![Orders](https://raw.githubusercontent.com/fabianasd/Roshambo/master/imageApp/result.png)
-
 
 ### History
 
