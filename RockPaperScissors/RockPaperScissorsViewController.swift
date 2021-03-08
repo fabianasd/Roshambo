@@ -72,9 +72,6 @@ class RockPaperScissorsViewController: UIViewController {
         
         // 1st Way: Programmatic View Controller Presentation
         if (playersMove == RPS.rock) {
-            print("history")
-            print("history[0].p1.description: \(history[0].p1.description)")
-            print("history[0].p2.description: \(history[0].p2.description)")
             // Get the storyboard and ResultViewController
             let storyboard = UIStoryboard (name: "Main", bundle: nil)
             let resultVC = storyboard.instantiateViewController(withIdentifier: "ResultViewController") as! ResultViewController

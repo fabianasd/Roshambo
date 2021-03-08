@@ -31,17 +31,15 @@ class HistoryViewController: UIViewController, UITableViewDataSource, UITableVie
         let history = self.histories[(indexPath as NSIndexPath).row]
         
         // Set the name
-        if( history.p1 == history.p2) {
-            cell.textLabel?.text = "Tie"
-        } else {
-            cell.textLabel?.text = history.p1.defeats(history.p2) ? "Win!" : "Lose"
+        if cell.detailTextLabel != nil {
+            cell.textLabel?.text = history.p1 == history.p2 ? "Tie" : history.p1.defeats(history.p2) ? "Win!" : "Lose"
         }
         
         // If the cell has a detail label, we will put the evil scheme in.
         if cell.detailTextLabel != nil {
             cell.detailTextLabel?.text = history.winner.description + " vs. " + history.loser.description
         }
-        
+    
         return cell
     }
     

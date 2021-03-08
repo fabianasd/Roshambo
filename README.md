@@ -1,6 +1,6 @@
 ## Roshambo
 
-#### Aplicativo para iPhone e jogas aleatórias de Rock, Paper and Scissors
+#### Aplicativo para iPhone de jogadas aleatórias de Rock, Paper and Scissors
 
 ## Visualização: IPhone SE (2nd generation)
 
