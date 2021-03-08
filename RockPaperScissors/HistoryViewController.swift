@@ -16,7 +16,6 @@ class HistoryViewController: UIViewController, UITableViewDataSource, UITableVie
     
     //MARK: Properties
     
-    var match: RPSMatch!
     var histories = [RPSMatch]()
     
     //MARK: Functions
@@ -39,11 +38,17 @@ class HistoryViewController: UIViewController, UITableViewDataSource, UITableVie
         if cell.detailTextLabel != nil {
             cell.detailTextLabel?.text = history.winner.description + " vs. " + history.loser.description
         }
-    
+        
         return cell
     }
     
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         return true
+    }
+    
+    //MARK: IBAction
+    
+    @IBAction func dismissHistory(_ sender: AnyObject) {
+        self.dismiss(animated: true, completion: nil)
     }
 }

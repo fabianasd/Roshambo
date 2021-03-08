@@ -57,7 +57,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleAspectFit" restorationIdentifier="HistoryViewController" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4nd-25-ErX">
-                                <rect key="frame" x="165" y="625" width="58" height="34"/>
+                                <rect key="frame" x="156" y="625" width="63" height="34"/>
                                 <color key="backgroundColor" red="1" green="0.76472645309999998" blue="0.45189130440000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <accessibility key="accessibilityConfiguration" identifier="HistoryViewController"/>
                                 <state key="normal" title="History">
@@ -71,14 +71,14 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.90789175030000002" blue="0.75654613969999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="4nd-25-ErX" firstAttribute="leading" secondItem="uZk-oR-UzU" secondAttribute="leading" constant="165" id="2RB-m5-aD0"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="4nd-25-ErX" secondAttribute="trailing" constant="140" id="CEV-n1-f72"/>
                             <constraint firstItem="Ay7-rG-oQ3" firstAttribute="centerX" secondItem="Fgh-U1-uLB" secondAttribute="centerX" constant="-6.5" id="ER3-Hd-3dl"/>
                             <constraint firstItem="Ay7-rG-oQ3" firstAttribute="top" secondItem="HUJ-al-Ubx" secondAttribute="bottom" constant="100" id="N5y-iY-vzo"/>
                             <constraint firstItem="Ay7-rG-oQ3" firstAttribute="centerX" secondItem="uZk-oR-UzU" secondAttribute="centerX" id="ShH-vH-V8s"/>
                             <constraint firstItem="fqQ-nG-h6S" firstAttribute="top" secondItem="4nd-25-ErX" secondAttribute="bottom" constant="8" id="Trd-8T-iDo"/>
                             <constraint firstItem="2pQ-vK-SEv" firstAttribute="leading" secondItem="uZk-oR-UzU" secondAttribute="leadingMargin" constant="30" id="Y4E-zJ-fsT"/>
+                            <constraint firstItem="4nd-25-ErX" firstAttribute="leading" secondItem="uZk-oR-UzU" secondAttribute="leadingMargin" constant="140" id="Ymr-xi-Tnm"/>
                             <constraint firstItem="kDr-vO-WkA" firstAttribute="top" secondItem="Ay7-rG-oQ3" secondAttribute="bottom" constant="20" id="dDf-3F-LnF"/>
-                            <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="4nd-25-ErX" secondAttribute="trailing" constant="94" id="fgu-3U-ScU"/>
                             <constraint firstItem="kDr-vO-WkA" firstAttribute="top" secondItem="2pQ-vK-SEv" secondAttribute="top" id="gWe-ML-OrK"/>
                             <constraint firstItem="fqQ-nG-h6S" firstAttribute="top" secondItem="Fgh-U1-uLB" secondAttribute="bottom" constant="69" id="rK2-fH-g2c"/>
                             <constraint firstAttribute="trailingMargin" secondItem="kDr-vO-WkA" secondAttribute="trailing" constant="30" id="tts-7X-HQC"/>
@@ -173,7 +173,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="HistoryViewController" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lOW-Rr-W6f">
-                                <rect key="frame" x="16" y="0.0" width="343" height="667"/>
+                                <rect key="frame" x="16" y="0.0" width="343" height="623"/>
                                 <color key="backgroundColor" red="1" green="0.90789175030000002" blue="0.75654613969999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="sectionIndexBackgroundColor" red="1" green="0.90789175030000002" blue="0.75654613969999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
@@ -207,12 +207,26 @@
                                     <outlet property="dataSource" destination="vQ0-Nz-J4w" id="I34-jc-3yJ"/>
                                 </connections>
                             </tableView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="AT7-oM-Thd">
+                                <rect key="frame" x="16" y="623" width="343" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.76472645309999998" blue="0.45189130440000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <items>
+                                    <barButtonItem title="Back" image="backward" catalog="system" id="1j5-tv-bVU">
+                                        <color key="tintColor" red="1" green="0.49485838409999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <action selector="dismissHistory:" destination="vQ0-Nz-J4w" id="wxw-pp-b8z"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.90789175030000002" blue="0.75654613969999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="AT7-oM-Thd" firstAttribute="top" secondItem="lOW-Rr-W6f" secondAttribute="bottom" id="0kS-gZ-eDT"/>
                             <constraint firstItem="lOW-Rr-W6f" firstAttribute="leading" secondItem="3h8-c7-erh" secondAttribute="leadingMargin" id="4qV-Nv-AAW"/>
                             <constraint firstAttribute="trailingMargin" secondItem="lOW-Rr-W6f" secondAttribute="trailing" id="HaO-bW-gmL"/>
-                            <constraint firstItem="Mtm-Tl-SQG" firstAttribute="top" secondItem="lOW-Rr-W6f" secondAttribute="bottom" id="W5U-jy-952"/>
                             <constraint firstItem="lOW-Rr-W6f" firstAttribute="top" secondItem="xbD-8w-twK" secondAttribute="bottom" id="cAT-Mk-gIR"/>
                         </constraints>
                     </view>
@@ -220,13 +234,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l1a-gb-JsS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="954" y="779"/>
+            <point key="canvasLocation" x="952.79999999999995" y="778.56071964017997"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="Ih9-HG-qHO"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="backward" catalog="system" width="128" height="79"/>
         <image name="paper" width="75" height="65"/>
         <image name="rock" width="75" height="65"/>
         <image name="rock-paper-scissors1" width="460" height="276"/>
